@@ -5,6 +5,7 @@ class CfgFunctions {
         class kb {
             class kbTell {};
             class kbTellLocal {};
+            class kbTellX {};
         };
     };
 };
@@ -17,6 +18,8 @@ class CfgSentences {
         };
     };
 };
+
+#include "CfgSounds.hpp"
 
 class CfgDebriefing {
     class Soup {

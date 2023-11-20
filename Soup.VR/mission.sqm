@@ -5,25 +5,25 @@ class EditorData
 	angleGridStep=0.2617994;
 	scaleGridStep=1;
 	autoGroupingDist=10;
-	toggles=521;
+	toggles=1545;
 	mods[]=
 	{
 		"3denEnhanced"
 	};
 	class ItemIDProvider
 	{
-		nextID=2015;
+		nextID=2023;
 	};
 	class LayerIndexProvider
 	{
-		nextID=6;
+		nextID=20;
 	};
 	class Camera
 	{
-		pos[]={7894.7285,8.3654118,4619.9771};
-		dir[]={-0.95119375,-0.30857208,0.003736442};
-		up[]={-0.30856973,0.95120096,0.0012121116};
-		aside[]={0.003928131,0,0.99999237};
+		pos[]={7894.9043,10.037554,4620.0483};
+		dir[]={-0.93744117,-0.34813496,-0.0042226175};
+		up[]={-0.34813395,0.93744272,-0.0015681376};
+		aside[]={-0.0045044399,1.0189069e-008,0.99999583};
 	};
 };
 binarizationWanted=0;
@@ -103,10 +103,160 @@ class ScenarioData
 	briefing=0;
 	showHUD=0;
 	saving=0;
+	disabledAI=1;
 };
 class CustomAttributes
 {
 	class Category0
+	{
+		name="Multiplayer";
+		class Attribute0
+		{
+			property="ENH_dynamicSkill";
+			expression="if (!is3DEN && _value # 0 && isServer) then      {        _value params        [          '_enable',          '_skillMinBLUFOR',          '_skillAimMinBLUFOR',          '_skillMaxBLUFOR',          '_skillAimMaxBlUFOR',          '_skillMinOPFOR',          '_skillAimMinOPFOR',          '_skillMaxOPFOR',          '_skillAimMaxOPFOR',          '_skillMinIndependent',          '_skillAimMinIndependent',          '_skillMaxIndependent',          '_skillAimMaxIndependent'        ];        [          true,          [            [WEST, _skillMinBLUFOR, _skillAimMinBLUFOR, _skillMaxBLUFOR, _skillAimMaxBlUFOR],            [EAST, _skillMinOPFOR, _skillAimMinOPFOR, _skillMaxOPFOR, _skillAimMaxOPFOR],            [INDEPENDENT, _skillMinIndependent, _skillAimMinIndependent, _skillMaxIndependent, _skillAimMaxIndependent]          ]        ] call BIS_fnc_EXP_camp_dynamicAISkill;      }";
+			class Value
+			{
+				class data
+				{
+					singleType="ARRAY";
+					class value
+					{
+						items=13;
+						class Item0
+						{
+							class data
+							{
+								singleType="BOOL";
+								value=0;
+							};
+						};
+						class Item1
+						{
+							class data
+							{
+								singleType="SCALAR";
+								value=0.5;
+							};
+						};
+						class Item2
+						{
+							class data
+							{
+								singleType="SCALAR";
+								value=0.30000001;
+							};
+						};
+						class Item3
+						{
+							class data
+							{
+								singleType="SCALAR";
+								value=0.80000001;
+							};
+						};
+						class Item4
+						{
+							class data
+							{
+								singleType="SCALAR";
+								value=0.5;
+							};
+						};
+						class Item5
+						{
+							class data
+							{
+								singleType="SCALAR";
+								value=0.5;
+							};
+						};
+						class Item6
+						{
+							class data
+							{
+								singleType="SCALAR";
+								value=0.30000001;
+							};
+						};
+						class Item7
+						{
+							class data
+							{
+								singleType="SCALAR";
+								value=0.80000001;
+							};
+						};
+						class Item8
+						{
+							class data
+							{
+								singleType="SCALAR";
+								value=0.5;
+							};
+						};
+						class Item9
+						{
+							class data
+							{
+								singleType="SCALAR";
+								value=0.5;
+							};
+						};
+						class Item10
+						{
+							class data
+							{
+								singleType="SCALAR";
+								value=0.30000001;
+							};
+						};
+						class Item11
+						{
+							class data
+							{
+								singleType="SCALAR";
+								value=0.80000001;
+							};
+						};
+						class Item12
+						{
+							class data
+							{
+								singleType="SCALAR";
+								value=0.5;
+							};
+						};
+					};
+				};
+			};
+		};
+		class Attribute1
+		{
+			property="RespawnTemplates";
+			expression="true";
+			class Value
+			{
+				class data
+				{
+					singleType="ARRAY";
+					class value
+					{
+						items=1;
+						class Item0
+						{
+							class data
+							{
+								singleType="STRING";
+								value="None";
+							};
+						};
+					};
+				};
+			};
+		};
+		nAttributes=2;
+	};
+	class Category1
 	{
 		name="Scenario";
 		class Attribute0
@@ -453,7 +603,7 @@ class Mission
 			side="Civilian";
 			class Entities
 			{
-				items=1;
+				items=4;
 				class Item0
 				{
 					dataType="Object";
@@ -467,6 +617,7 @@ class Mission
 					class Attributes
 					{
 						isPlayer=1;
+						isPlayable=1;
 						class Inventory
 						{
 							class uniform
@@ -519,6 +670,57 @@ class Mission
 						nAttributes=2;
 					};
 				};
+				class Item1
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={7881.0078,5.0014391,4621.0596};
+						angles[]={0,1.5707964,0};
+					};
+					side="Civilian";
+					flags=5;
+					class Attributes
+					{
+						isPlayable=1;
+					};
+					id=2016;
+					type="C_Driver_3_F";
+				};
+				class Item2
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={7880.9819,5.0014391,4618.9209};
+						angles[]={0,1.5707964,0};
+					};
+					side="Civilian";
+					flags=5;
+					class Attributes
+					{
+						isPlayable=1;
+					};
+					id=2020;
+					type="C_Driver_1_F";
+				};
+				class Item3
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={7881.0259,5.0014391,4617.9292};
+						angles[]={0,1.5707964,0};
+					};
+					side="Civilian";
+					flags=5;
+					class Attributes
+					{
+						isPlayable=1;
+					};
+					id=2022;
+					type="C_Driver_2_F";
+				};
 			};
 			class Attributes
 			{
@@ -528,16 +730,17 @@ class Mission
 		class Item3
 		{
 			dataType="Trigger";
-			position[]={7887.3638,5,4619.938};
+			position[]={7887.52,5,4619.96};
 			class Attributes
 			{
 				name="soupTrigger";
 				text="Start Soup";
-				onActivation="thisTrigger spawn {" \n "  [" \n "    ""Soup""," \n "    ""Soup""," \n "    """"," \n "    false," \n "    {" \n "      params [""_from"", ""_to"", ""_sentenceID"", ""_i"", ""_args""];" \n "      if (_sentenceID isEqualTo ""sentence24"") then {" \n "        _pos = getPosATL soupTrigger vectorAdd [0,0,70];" \n "        _bomb = ""Bo_GBU12_LGB"" createVehicle _pos;" \n "        _bomb setVectorDirAndUp [[0,0,-1], [0,1,0]];" \n "        {_x allowDamage false} forEach allPlayers;" \n "      };" \n "    }" \n "  ] call TGC_fnc_kbTell;" \n "};" \n "thisTrigger spawn {" \n "  _food = [""Land_BakedBeans_F"", ""Land_Can_Dented_F"", ""Land_Can_V1_F"", ""Land_Can_V2_F"", ""Land_Can_V3_F"", ""Land_TacticalBacon_F""];" \n "  for ""_i"" from 1 to 300 do {" \n "    _pos = getPosATL _this vectorAdd [0,0,30];" \n "    _obj = selectRandom _food createVehicle [0,0,0];" \n "    _obj setPosATL _pos;" \n "    _obj setVelocity [random 10-5,random 10-5,random 10-5];" \n "    sleep 0.125;" \n "  };" \n "};";
-				sizeA=6;
-				sizeB=4;
+				onActivation="[" \n "  ""Soup""," \n "  ""Soup""," \n "  """"" \n "] remoteExec [""TGC_fnc_kbTellX""];" \n "thisTrigger spawn {" \n "  _food = [""Land_BakedBeans_F"", ""Land_Can_Dented_F"", ""Land_Can_V1_F"", ""Land_Can_V2_F"", ""Land_Can_V3_F"", ""Land_TacticalBacon_F""];" \n "  for ""_i"" from 1 to 300 do {" \n "    _pos = getPosATL _this vectorAdd [0,0,30];" \n "    _obj = selectRandom _food createVehicle [0,0,0];" \n "    _obj setPosATL _pos;" \n "    _obj setVelocity [random 10-5,random 10-5,random 10-5];" \n "    sleep 0.125;" \n "  };" \n "};";
+				sizeA=5.5292969;
+				sizeB=4.0053711;
 				activationBy="ANYPLAYER";
 				isRectangle=1;
+				isServerOnly=1;
 			};
 			id=16;
 			type="EmptyDetectorAreaR50";
