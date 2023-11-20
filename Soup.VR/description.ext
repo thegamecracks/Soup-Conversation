@@ -6,6 +6,8 @@ class CfgFunctions {
             class kbTell {};
             class kbTellLocal {};
             class kbTellX {};
+            class kbTellXLock {};
+            class kbTellXUnlock {};
         };
     };
 };

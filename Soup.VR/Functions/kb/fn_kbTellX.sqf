@@ -220,6 +220,7 @@ private _actorUnits = createHashMap;
     _actorUnits set [_actor, _unit];
 } forEach ("true" configClasses _sentencesConfig);
 
+[values _actorUnits] call TGC_fnc_kbTellXLock;
 ["conversationStart", [_volumeCoef, _disableRadio]] call BIS_fnc_kbTellLocal;
 {
     if (values _actorUnits findIf {!alive _x} > -1) exitWith {};
@@ -275,3 +276,4 @@ private _actorUnits = createHashMap;
     };
 } forEach _sentences;
 ["conversationEnd", [_volumeCoef, _disableRadio]] call BIS_fnc_kbTellLocal;
+[values _actorUnits] call TGC_fnc_kbTellXUnlock;
