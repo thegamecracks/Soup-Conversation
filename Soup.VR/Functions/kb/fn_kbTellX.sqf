@@ -51,7 +51,9 @@ Parameters:
             Provides a return value of one of the above.
     Array | Code sentenceCode:
         (Optional, default {})
-        (NOT IMPLEMENTED)
+        WORK IN PROGRESS:
+            The index will always start from 0, and the receiver will always
+            be the same as the speaker.
         The code to be spawned at the start of every sentence.
         An array can alternatively be passed in the format [code, arguments].
         During execution, _this will be [speaker, receiver, sentenceID, index, arguments].
@@ -254,9 +256,17 @@ private _actorUnits = createHashMap;
         _sound = _unit say3D [_sentence, _audibleDistance, 1, true];
     };
 
-    // TODO: run and wait for sentenceCode
+    private _sentenceCodeHandle = [
+        _unit,
+        _unit, // TODO determine receiver
+        toLower _sentence,
+        _forEachIndex, // TODO sentenceIndex
+        _sentenceCodeParams
+    ] spawn _sentenceCode;
+
     waitUntil {
         sleep 0.01;
+        if (!scriptDone _sentenceCodeHandle) exitWith {false};
         if (!alive _unit) exitWith {
             deleteVehicle _sound;
             true
