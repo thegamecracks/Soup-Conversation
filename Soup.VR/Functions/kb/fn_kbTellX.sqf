@@ -110,6 +110,7 @@ private _getSoundConfig = {
     } forEach [missionConfigFile, campaignConfigFile, configFile]
 };
 
+private _topicFull = format ["%1_%2", _mission, _topic];
 private _topicConfig = [_mission, _topic] call bis_fnc_kbTopicConfig;
 if (isNil "_topicConfig") exitWith {
     ["topic '%1' not found in '%2'", _topic, _mission] call BIS_fnc_error;
@@ -224,7 +225,7 @@ private _lastActorReal = "";
     private _textPlain = getText (_bikbSentence >> "textPlain");
 
     _sentences pushBack [
-        configName _x,
+        toLower configName _x,
         _actor,
         _lastActorReal,
         _text,
@@ -281,7 +282,7 @@ if (_lastActorReal isEqualTo "") then {
     private _sentenceCodeHandle = [
         _unit,
         _lastUnit,
-        toLower _sentence,
+        _sentence,
         _forEachIndex, // TODO sentenceIndex
         _sentenceCodeParams
     ] spawn _sentenceCode;
@@ -295,6 +296,9 @@ if (_lastActorReal isEqualTo "") then {
         };
         isNull _sound
     };
+
+    // FIXME: this does not trigger kbWasSaid
+    _unit kbReact [_lastUnit, _topicFull, _sentence];
 } forEach _sentences;
 ["conversationEnd", [_volumeCoef, _disableRadio]] call BIS_fnc_kbTellLocal;
 [values _actorUnits] call TGC_fnc_kbTellXUnlock;
