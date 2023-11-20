@@ -802,7 +802,7 @@ class Mission
 			class Attributes
 			{
 				text="End Soup";
-				condition="!alive lelouch || {!alive suzaku || {suzaku kbWasSaid [lelouch, ""Soup_Soup"", ""sentence25"", 10]}}";
+				condition="!alive lelouch || {!alive suzaku || {suzaku kbWasSaid [lelouch, ""Soup_Soup"", ""soup25"", 10]}}";
 				onActivation="[""Soup""] call BIS_fnc_endMission;";
 				sizeA=0;
 				sizeB=0;
