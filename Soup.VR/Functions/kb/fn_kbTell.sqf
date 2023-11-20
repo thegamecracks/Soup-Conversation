@@ -392,12 +392,12 @@ if (count _listUnits > 0) then {
 
             //--- Sentence said
             // (
-			// 	_from kbwassaid [_toActual,_topic,_sentenceId,10]
+            //     _from kbwassaid [_toActual,_topic,_sentenceId,10]
             //     &&
             //     time - _time > 1
-			// )
-			// NOTE: above takes too long for soup
-			_from kbwassaid [_toActual,_topic,_sentenceId,10]
+            // )
+            // NOTE: above takes too long for soup
+            _from kbwassaid [_toActual,_topic,_sentenceId,10]
             ||
             //--- Game loaded - skip
             bis_fnc_kbTell_load

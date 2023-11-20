@@ -25,9 +25,9 @@ switch _mode do {
         if (_channel in ["DIRECT", "VEHICLE"] || _showSubtitles || (hasInterface && { "ItemRadio" in (assignedItems player) })) then
         {
             // Search for disconnected subtitles, play if necessary
-			// (updated to support mission config)
-			private _config = [_mission, _topic] call BIS_fnc_kbTopicConfig;
-			if (isNil "_config") exitWith {};
+            // (updated to support mission config)
+            private _config = [_mission, _topic] call BIS_fnc_kbTopicConfig;
+            if (isNil "_config") exitWith {};
             // private _text = getText (configFile >> "CfgSentences" >> _mission >> _topic >> "Sentences" >> _sentence >> "textPlain");
             private _text = getText (_config >> "Sentences" >> _sentence >> "textPlain");
             if (_text != "") then {[_from getvariable ["bis_fnc_kbTellLocal_name",name _from], _text] call BIS_fnc_showSubtitle;};
