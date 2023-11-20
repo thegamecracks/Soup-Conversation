@@ -862,11 +862,11 @@ class Mission
 		class Item6
 		{
 			dataType="Trigger";
-			position[]={7881.0488,5,4622.6475};
+			position[]={7881.0488,5,4622.647};
 			class Attributes
 			{
 				text="End Soup";
-				condition="!alive lelouch || {!alive suzaku || {suzaku kbWasSaid [lelouch, ""Soup_Soup"", ""soup25"", 10]}}";
+				condition="!alive lelouch || {!alive suzaku || {[suzaku, lelouch, ""Soup"", ""Soup25"", 10] call TGC_fnc_kbWasSaid}}";
 				onActivation="[""Soup""] call BIS_fnc_endMission;";
 				sizeA=0;
 				sizeB=0;

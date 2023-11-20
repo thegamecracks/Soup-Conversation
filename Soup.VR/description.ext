@@ -8,6 +8,7 @@ class CfgFunctions {
             class kbTellX {};
             class kbTellXLock {};
             class kbTellXUnlock {};
+            class kbWasSaid {};
         };
     };
 };

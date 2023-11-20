@@ -297,8 +297,17 @@ if (_lastActorReal isEqualTo "") then {
         isNull _sound
     };
 
-    // FIXME: this does not trigger kbWasSaid
-    _unit kbReact [_lastUnit, _topicFull, _sentence];
+    private _unitSentences = _unit getVariable "TGC_fnc_kbWasSaid_sentences";
+    if (isNil "_unitSentences") then {
+        _unitSentences = createHashMap;
+        _unit setVariable ["TGC_fnc_kbWasSaid_sentences", _unitSentences];
+    };
+    private _unitSent = _unitSentences getOrDefault [
+        [_mission, _topic, _sentence],
+        [],
+        true
+    ];
+    _unitSent pushBack [time, _lastUnit];
 } forEach _sentences;
 ["conversationEnd", [_volumeCoef, _disableRadio]] call BIS_fnc_kbTellLocal;
 [values _actorUnits] call TGC_fnc_kbTellXUnlock;
