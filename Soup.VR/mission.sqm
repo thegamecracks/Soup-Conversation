@@ -667,7 +667,20 @@ class Mission
 								};
 							};
 						};
-						nAttributes=2;
+						class Attribute2
+						{
+							property="ENH_doStop";
+							expression="if (!is3DEN && _value) then {doStop _this}";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						nAttributes=3;
 					};
 				};
 				class Item1
@@ -686,6 +699,23 @@ class Mission
 					};
 					id=2016;
 					type="C_Driver_3_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="ENH_doStop";
+							expression="if (!is3DEN && _value) then {doStop _this}";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						nAttributes=1;
+					};
 				};
 				class Item2
 				{
@@ -703,6 +733,23 @@ class Mission
 					};
 					id=2020;
 					type="C_Driver_1_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="ENH_doStop";
+							expression="if (!is3DEN && _value) then {doStop _this}";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						nAttributes=1;
+					};
 				};
 				class Item3
 				{
@@ -720,6 +767,23 @@ class Mission
 					};
 					id=2022;
 					type="C_Driver_2_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="ENH_doStop";
+							expression="if (!is3DEN && _value) then {doStop _this}";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						nAttributes=1;
+					};
 				};
 			};
 			class Attributes
