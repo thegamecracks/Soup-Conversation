@@ -19,4 +19,4 @@ Author:
 */
 params ["_units"];
 if (_units isEqualType objNull) then {_units = [_units]};
-{_x setVariable [_fnc_scriptName, nil]} forEach _units;
+{_x setVariable ["TGC_fnc_kbTellXLock", nil]} forEach _units;

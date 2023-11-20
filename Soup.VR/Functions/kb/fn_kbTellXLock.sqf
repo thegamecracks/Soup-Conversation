@@ -26,4 +26,4 @@ waitUntil {
     _units findIf {!isNil {_x getVariable _fnc_scriptName}} isEqualTo -1
 };
 
-{_x setVariable [_fnc_scriptName, true]} forEach _units;
+{_x setVariable ["TGC_fnc_kbTellXLock", true]} forEach _units;
