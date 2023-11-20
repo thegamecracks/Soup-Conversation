@@ -1,0 +1,26 @@
+onLoadName = "Soup";
+
+class CfgFunctions {
+    class TGC {
+        class kb {
+            class kbTell {};
+            class kbTellLocal {};
+        };
+    };
+};
+
+class CfgSentences {
+    class Soup {
+        class Soup {
+            file = "kb\soup.bikb";
+            #include "kb\soup.bikb"
+        };
+    };
+};
+
+class CfgDebriefing {
+    class Soup {
+        subtitle = "Soup Store";
+        pictureBackground = "images\end.jpg";
+    };
+};

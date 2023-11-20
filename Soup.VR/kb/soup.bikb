@@ -1,0 +1,181 @@
+class Sentences {
+    class Sentence01 {
+        text = "";
+        textPlain = "Hello?";
+        speech[] = {"\audio\soup01.ogg"};
+        class Arguments {};
+        actor = "lelouch";
+    };
+    class Sentence02 {
+        text = "";
+        textPlain = "Hey, what's up?";
+        speech[] = {"\audio\soup02.ogg"};
+        class Arguments {};
+        actor = "suzaku";
+    };
+    class Sentence03 {
+        text = "";
+        textPlain = "I need your help, can you come here?";
+        speech[] = {"\audio\soup03.ogg"};
+        class Arguments {};
+        actor = "lelouch";
+    };
+    class Sentence04 {
+        text = "";
+        textPlain = "Uh, I can't. I'm buying clothes.";
+        speech[] = {"\audio\soup04.ogg"};
+        class Arguments {};
+        actor = "suzaku";
+    };
+    class Sentence05 {
+        text = "";
+        textPlain = "Alright, well hurry up and come over here.";
+        speech[] = {"\audio\soup05.ogg"};
+        class Arguments {};
+        actor = "lelouch";
+    };
+    class Sentence06 {
+        text = "";
+        textPlain = "I can't find them.";
+        speech[] = {"\audio\soup06.ogg"};
+        class Arguments {};
+        actor = "suzaku";
+    };
+    class Sentence07 {
+        text = "";
+        textPlain = "What do you mean you can't find them?";
+        speech[] = {"\audio\soup07.ogg"};
+        class Arguments {};
+        actor = "lelouch";
+    };
+    class Sentence08 {
+        text = "";
+        textPlain = "I can't find them, there's only soup.";
+        speech[] = {"\audio\soup08.ogg"};
+        class Arguments {};
+        actor = "suzaku";
+    };
+    class Sentence09 {
+        text = "";
+        textPlain = "What do you mean there's only soup?";
+        speech[] = {"\audio\soup09.ogg"};
+        class Arguments {};
+        actor = "lelouch";
+    };
+    class Sentence10 {
+        text = "";
+        textPlain = "It means there's only soup!";
+        speech[] = {"\audio\soup10.ogg"};
+        class Arguments {};
+        actor = "suzaku";
+    };
+    class Sentence11 {
+        text = "";
+        textPlain = "Well then get out of the soup aisle!";
+        speech[] = {"\audio\soup11.ogg"};
+        class Arguments {};
+        actor = "lelouch";
+    };
+    class Sentence12 {
+        text = "";
+        textPlain = "Alright, you don't have to shout at me!";
+        speech[] = {"\audio\soup12.ogg"};
+        class Arguments {};
+        actor = "suzaku";
+    };
+    class Sentence13 {
+        text = "";
+        textPlain = "There's more soup!";
+        speech[] = {"\audio\soup13.ogg"};
+        class Arguments {};
+        actor = "suzaku";
+    };
+    class Sentence14 {
+        text = "";
+        textPlain = "What do you mean there's more soup?";
+        speech[] = {"\audio\soup14.ogg"};
+        class Arguments {};
+        actor = "lelouch";
+    };
+    class Sentence15 {
+        text = "";
+        textPlain = "There's just more soup!";
+        speech[] = {"\audio\soup15.ogg"};
+        class Arguments {};
+        actor = "suzaku";
+    };
+    class Sentence16 {
+        text = "";
+        textPlain = "Go into the next aisle!";
+        speech[] = {"\audio\soup16.ogg"};
+        class Arguments {};
+        actor = "lelouch";
+    };
+    class Sentence17 {
+        text = "";
+        textPlain = "There's still soup!";
+        speech[] = {"\audio\soup17.ogg"};
+        class Arguments {};
+        actor = "suzaku";
+    };
+    class Sentence18 {
+        text = "";
+        textPlain = "Where are you right now?!";
+        speech[] = {"\audio\soup18.ogg"};
+        class Arguments {};
+        actor = "lelouch";
+    };
+    class Sentence19 {
+        text = "";
+        textPlain = "I'm at soup!";
+        speech[] = {"\audio\soup19.ogg"};
+        class Arguments {};
+        actor = "suzaku";
+    };
+    class Sentence20 {
+        text = "";
+        textPlain = "What do you mean you're at soup?!";
+        speech[] = {"\audio\soup20.ogg"};
+        class Arguments {};
+        actor = "lelouch";
+    };
+    class Sentence21 {
+        text = "";
+        textPlain = "I mean I'm at soup!";
+        speech[] = {"\audio\soup21.ogg"};
+        class Arguments {};
+        actor = "suzaku";
+    };
+    class Sentence22 {
+        text = "";
+        textPlain = "What store are you in?!";
+        speech[] = {"\audio\soup22.ogg"};
+        class Arguments {};
+        actor = "lelouch";
+    };
+    class Sentence23 {
+        text = "";
+        textPlain = "I'm at the soup store!";
+        speech[] = {"\audio\soup23.ogg"};
+        class Arguments {};
+        actor = "suzaku";
+    };
+    class Sentence24 {
+        text = "";
+        textPlain = "Why are you buying clothes at the soup store?!";
+        speech[] = {"\audio\soup24.ogg"};
+        class Arguments {};
+        actor = "lelouch";
+    };
+    class Sentence25 {
+        text = "";
+        textPlain = "Fuck you!";
+        speech[] = {"\audio\soup25.ogg"};
+        class Arguments {};
+        actor = "suzaku";
+    };
+};
+class Arguments {};
+class Special {};
+startWithVocal[] = { hour };
+startWithConsonant[] = { europe, university };
