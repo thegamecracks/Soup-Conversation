@@ -2,6 +2,8 @@
 
 This is a test mission using Arma 3's Conversations system.
 
+<video src="https://user-images.githubusercontent.com/61257169/284313991-1824292c-2ae9-447c-8e55-9e678cd46c80.mp4" data-canonical-src="https://user-images.githubusercontent.com/61257169/284313991-1824292c-2ae9-447c-8e55-9e678cd46c80.mp4" controls="controls" muted="muted" class="d-block rounded-bottom-2 border-top width-fit" style="max-height:640px; min-height: 200px"></video>
+
 Workshop: https://steamcommunity.com/sharedfiles/filedetails/?id=3085209592
 
 Hello? Hey, what's up? I need your help, can you come here? Uh, I can't.
