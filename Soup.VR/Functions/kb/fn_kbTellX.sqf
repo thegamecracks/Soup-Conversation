@@ -139,6 +139,8 @@ if !(_priority in _priorityCurrent) exitwith {
 
 private _sentences = [];
 private _actorUnits = createHashMap;
+private _lastActor = "";
+private _lastActorReal = "";
 {
     if (!isClass _x) then {continue};
 
@@ -173,6 +175,16 @@ private _actorUnits = createHashMap;
         ] call BIS_fnc_error;
         breakOut "main";
     };
+
+    if !(_lastActor in ["", _actor]) then {
+        if (_lastActorReal isEqualTo "") then {
+            for "_i" from 0 to _forEachIndex - 1 do {
+                _sentences # _i set [2, _actor];
+            };
+        };
+        _lastActorReal = _lastActor;
+    };
+
     private _unit = switch (true) do {
         case (_units isEqualType true): {
             // TODO create dummy units when units = true
@@ -214,19 +226,28 @@ private _actorUnits = createHashMap;
     _sentences pushBack [
         configName _x,
         _actor,
+        _lastActorReal,
         _text,
         _textPlain
     ];
     _actorUnits set [_actor, _unit];
+
+    _lastActor = _actor;
 } forEach ("true" configClasses _sentencesConfig);
+
+if (_lastActorReal isEqualTo "") then {
+    // Only one actor, must be speaking to themselves
+    {_x set [2, _lastActor]} forEach _sentences;
+};
 
 [values _actorUnits] call TGC_fnc_kbTellXLock;
 ["conversationStart", [_volumeCoef, _disableRadio]] call BIS_fnc_kbTellLocal;
 {
     if (values _actorUnits findIf {!alive _x} > -1) exitWith {};
 
-    _x params ["_sentence", "_actor", "_text", "_textPlain"];
+    _x params ["_sentence", "_actor", "_lastActor", "_text", "_textPlain"];
     private _unit = _actorUnits get _actor;
+    private _lastUnit = _actorUnits get _lastActor;
     private _useRadio = switch (true) do {
         case (_radioMode isEqualTo true): {true};
         case (_radioMode isEqualTo false): {
@@ -259,7 +280,7 @@ private _actorUnits = createHashMap;
 
     private _sentenceCodeHandle = [
         _unit,
-        _unit, // TODO determine receiver
+        _lastUnit,
         toLower _sentence,
         _forEachIndex, // TODO sentenceIndex
         _sentenceCodeParams
